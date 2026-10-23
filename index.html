@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advogado em Trindade–GO | Ricardo Menezes</title>
+    <meta name="description" content="Informações sobre atendimento jurídico nas áreas criminal, cível e de família em Trindade–GO e região.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            DEFAULT: '#0B1730',
+                            dark: '#070f20',
+                            light: '#13264d'
+                        },
+                        gold: {
+                            DEFAULT: '#C5A35B',
+                            light: '#d4b776',
+                            dark: '#a88842'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; background-color: #0B1730; color: #FFFFFF; }
+        h1, h2, h3, h4, .font-serif { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-navy text-white antialiased selection:bg-gold selection:text-navy">
+
+    <!-- CABEÇALHO -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-navy/95 backdrop-blur-md border-b border-gold/20 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#inicio" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-full border border-gold flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-navy transition-all duration-300">
+                    <i class="fa-solid fa-scale-balanced text-lg"></i>
+                </div>
+                <div>
+                    <span class="block font-serif text-lg sm:text-xl font-bold tracking-wide text-white">ADV. RICARDO MENEZES</span>
+                    <span class="block text-xs text-gold tracking-widest uppercase">Trindade–GO e região</span>
+                </div>
+            </a>
+
+            <!-- Menu Desktop -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#inicio" class="text-sm font-medium hover:text-gold transition-colors">Início</a>
+                <a href="#sobre" class="text-sm font-medium hover:text-gold transition-colors">Sobre</a>
+                <a href="#atuacao" class="text-sm font-medium hover:text-gold transition-colors">Áreas de atuação</a>
+                <a href="#atendimento" class="text-sm font-medium hover:text-gold transition-colors">Atendimento</a>
+                <a href="#faq" class="text-sm font-medium hover:text-gold transition-colors">Perguntas frequentes</a>
+                <a href="#contato" class="text-sm font-medium hover:text-gold transition-colors">Contato</a>
+            </nav>
+
+            <!-- Botão de Destaque -->
+            <div class="hidden md:block">
+                <a href="https://wa.me/5562985756509?text=Olá,%20gostaria%20de%20informações%20sobre%20atendimento%20jurídico." target="_blank" rel="noopener noreferrer" class="bg-gold hover:bg-gold-light text-navy font-semibold px-5 py-2.5 rounded-lg transition-all duration-300 shadow-md hover:shadow-gold/20 flex items-center space-x-2 text-sm">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>Solicitar atendimento</span>
+                </a>
+            </div>
+
+            <!-- Menu Hamburguer Mobile -->
+            <button id="menu-btn" aria-label="Abrir menu" class="md:hidden text-white focus:outline-none p-2">
+                <i class="fa-solid fa-bars text-2xl text-gold"></i>
+            </button>
+        </div>
+
+        <!-- Menu Mobile Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-navy/98 border-b border-gold/20 shadow-xl py-6 px-6 transition-all">
+            <div class="flex flex-col space-y-4">
+                <a href="#inicio" class="mobile-link text-base font-medium hover:text-gold transition-colors">Início</a>
+                <a href="#sobre" class="mobile-link text-base font-medium hover:text-gold transition-colors">Sobre</a>
+                <a href="#atuacao" class="mobile-link text-base font-medium hover:text-gold transition-colors">Áreas de atuação</a>
+                <a href="#atendimento" class="mobile-link text-base font-medium hover:text-gold transition-colors">Atendimento</a>
+                <a href="#faq" class="mobile-link text-base font-medium hover:text-gold transition-colors">Perguntas frequentes</a>
+                <a href="#contato" class="mobile-link text-base font-medium hover:text-gold transition-colors">Contato</a>
+                <div class="pt-2">
+                    <a href="https://wa.me/5562985756509?text=Olá,%20gostaria%20de%20informações%20sobre%20atendimento%20jurídico." target="_blank" rel="noopener noreferrer" class="w-full bg-gold text-navy font-semibold px-5 py-3 rounded-lg text-center flex items-center justify-center space-x-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Solicitar atendimento</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SEÇÃO PRINCIPAL — HOME -->
+    <section id="inicio" class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden bg-gradient-to-b from-navy-dark via-navy to-navy-light">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#C5A35B_1px,transparent_1px)] [background-size:24px_24px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Texto Principal -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full border border-gold/40 bg-gold/10 text-gold text-xs uppercase tracking-widest">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                        <span>Advocacia Estratégica & Confiável</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-serif leading-tight text-white">
+                        Orientação jurídica com <span class="text-gold">seriedade</span>, estratégia e compromisso.
+                    </h1>
+                    <p class="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto lg:mx-0 font-light">
+                        Atendimento jurídico nas áreas criminal, cível e de família, com opções presenciais e on-line em Trindade–GO e região.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="https://wa.me/5562985756509?text=Olá,%20gostaria%20de%20informações%20sobre%20atendimento%20jurídico." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-gold hover:bg-gold-light text-navy font-semibold px-8 py-3.5 rounded-lg transition-all shadow-lg flex items-center justify-center space-x-3 text-base">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span>Falar pelo WhatsApp</span>
+                        </a>
+                        <a href="#atuacao" class="w-full sm:w-auto border border-gold/60 hover:bg-gold/10 text-white font-medium px-8 py-3.5 rounded-lg transition-all text-center">
+                            Conheça as áreas de atuação
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Foto / Elemento Visual Profissional -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="absolute -inset-2 bg-gradient-to-r from-gold to-gold-dark rounded-2xl opacity-30 blur-sm"></div>
+                        <div class="relative bg-navy-light border border-gold/40 rounded-2xl p-6 shadow-2xl text-center space-y-4">
+                            <div class="w-32 h-32 mx-auto rounded-full bg-navy border-2 border-gold flex items-center justify-center shadow-inner text-gold">
+                                <i class="fa-solid fa-user-tie text-5xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-xl font-bold text-white">Dr. Ricardo Menezes</h3>
+                                <p class="text-xs text-gold tracking-wider uppercase mt-1">Advogado Inscrito na OAB</p>
+                            </div>
+                            <div class="border-t border-gold/20 pt-4 text-sm text-gray-300 space-y-2">
+                                <div class="flex items-center justify-center space-x-2 text-xs text-gray-400">
+                                    <i class="fa-solid fa-location-dot text-gold"></i>
+                                    <span>Trindade–GO e Região Metropolitana</span>
+                                </div>
+                                <div class="flex items-center justify-center space-x-2 text-xs text-gray-400">
+                                    <i class="fa-solid fa-shield-halved text-gold"></i>
+                                    <span>Atendimento Ético e Individualizado</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE O ADVOGADO -->
+    <section id="sobre" class="py-20 bg-navy-dark border-t border-gold/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-xs uppercase tracking-widest text-gold font-semibold">Perfil Profissional</span>
+                <h2 class="text-3xl sm:text-4xl font-bold font-serif text-white">Conheça o advogado</h2>
+                <div class="w-16 h-0.5 bg-gold mx-auto"></div>
+                <p class="text-gray-300 text-base sm:text-lg">
+                    Atuação jurídica voltada à análise individual de cada caso, com comunicação clara, atendimento profissional e orientação sobre os caminhos jurídicos disponíveis.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-navy border border-gold/20 rounded-xl p-6 shadow-lg space-y-3 hover:border-gold/50 transition-all">
+                    <div class="w-12 h-12 rounded-lg bg-gold/10 border border-gold/30 flex items-center justify-center text-gold">
+                        <i class="fa-solid fa-id-card text-xl"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-white">Nome & Inscrição OAB</h3>
+                    <p class="text-sm text-gray-300">
+                        <strong class="text-white block">Ricardo Pereira (Ricardo Menezes)</strong>
+                        <span class="text-gold text-xs">OAB/GO [Número sob validação]</span>
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-navy border border-gold/20 rounded-xl p-6 shadow-lg space-y-3 hover:border-gold/50 transition-all">
+                    <div class="w-12 h-12 rounded-lg bg-gold/10 border border-gold/30 flex items-center justify-center text-gold">
+                        <i class="fa-solid fa-graduation-cap text-xl"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-white">Formação Acadêmica</h3>
+                    <p class="text-sm text-gray-300">
+                        Bacharel em Direito com sólida formação teórica e prática voltada à resolução eficiente de conflitos e consultoria preventiva.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-navy border border-gold/20 rounded-xl p-6 shadow-lg space-y-3 hover:border-gold/50 transition-all">
+                    <div class="w-12 h-12 rounded-lg bg-gold/10 border border-gold/30 flex items-center justify-center text-gold">
+                        <i class="fa-solid fa-briefcase text-xl"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-white">Experiência Profissional</h3>
+                    <p class="text-sm text-gray-300">
+                        Atuação dedicada e constante na defesa de direitos e garantias nas esferas criminal, cível e de família em Trindade e região.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Endereço e Informações Adicionais -->
+            <div class="mt-12 bg-navy border border-gold/30 rounded-xl p-8 shadow-xl max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="space-y-2 text-center md:text-left">
+                    <h4 class="font-serif text-xl font-bold text-white flex items-center justify-center md:justify-start space-x-2">
+                        <i class="fa-solid fa-location-dot text-gold"></i>
+                        <span>Endereço Profissional</span>
+                    </h4>
+                    <p class="text-sm text-gray-300">Trindade–GO e região metropolitana. Atendimento agendado para maior comodidade e sigilo.</p>
+                </div>
+                <div>
+                    <a href="https://wa.me/5562985756509?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener noreferrer" class="bg-gold hover:bg-gold-light text-navy font-semibold px-6 py-3 rounded-lg text-sm transition-all shadow-md inline-flex items-center space-x-2">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span>Consultar disponibilidade</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ÁREAS DE ATUAÇÃO -->
+    <section id="atuacao" class="py-20 bg-navy border-t border-gold/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-xs uppercase tracking-widest text-gold font-semibold">Especialidades</span>
+                <h2 class="text-3xl sm:text-4xl font-bold font-serif text-white">Áreas de atuação jurídica</h2>
+                <div class="w-16 h-0.5 bg-gold mx-auto"></div>
+                <p class="text-gray-300 text-base sm:text-lg">
+                    Serviços jurídicos prestados com rigor técnico, sigilo absoluto e foco total na proteção dos interesses do cliente.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Direito Criminal -->
+                <div class="bg-navy-dark border border-gold/20 rounded-2xl p-8 shadow-xl flex flex-col justify-between hover:border-gold/50 transition-all duration-300 group">
+                    <div class="space-y-4">
+                        <div class="w-14 h-14 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-navy transition-all duration-300">
+                            <i class="fa-solid fa-gavel text-2xl"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-white">Direito Criminal</h3>
+                        <p class="text-sm text-gray-300 leading-relaxed">
+                            Assistência jurídica em questões criminais, incluindo orientação urgente em situações de flagrante, acompanhamento de inquéritos policiais e defesa em procedimentos penais.
+                        </p>
+                    </div>
+                    <div class="pt-8">
+                        <a href="https://wa.me/5562985756509?text=Olá,%20gostaria%20de%20informações%20sobre%20atendimento%20na%20área%20criminal." target="_blank" rel="noopener noreferrer" class="w-full bg-gold/10 hover:bg-gold border border-gold/40 text-gold hover:text-navy font-semibold py-3 px-4 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 text-sm">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Solicitar orientação</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Direito Civil -->
+                <div class="bg-navy-dark border border-gold/20 rounded-2xl p-8 shadow-xl flex flex-col justify-between hover:border-gold/50 transition-all duration-300 group">
+                    <div class="space-y-4">
+                        <div class="w-14 h-14 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-navy transition-all duration-300">
+                            <i class="fa-solid fa-file-contract text-2xl"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-white">Direito Civil</h3>
+                        <p class="text-sm text-gray-300 leading-relaxed">
+                            Serviços cíveis voltados à análise de contratos, resolução de obrigações, solução de conflitos patrimoniais e assessoria jurídica preventiva ou contenciosa.
+                        </p>
+                    </div>
+                    <div class="pt-8">
+                        <a href="https://wa.me/5562985756509?text=Olá,%20gostaria%20de%20informações%20sobre%20atendimento%20na%20área%20cível." target="_blank" rel="noopener noreferrer" class="w-full bg-gold/10 hover:bg-gold border border-gold/40 text-gold hover:text-navy font-semibold py-3 px-4 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 text-sm">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Conhecer atendimento</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Direito de Família -->
+                <div class="bg-navy-dark border border-gold/20 rounded-2xl p-8 shadow-xl flex flex-col justify-between hover:border-gold/50 transition-all duration-300 group">
+                    <div class="space-y-4">
+                        <div class="w-14 h-14 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-navy transition-all duration-300">
+                            <i class="fa-solid fa-people-roof text-2xl"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-white">Direito de Família</h3>
+                        <p class="text-sm text-gray-300 leading-relaxed">
+                            Apoio jurídico especializado em questões familiares, compreendendo divórcio consensual ou litigioso, guarda de menores, pensão alimentícia e regulamentação de convivência.
+                        </p>
+                    </div>
+                    <div class="pt-8">
+                        <a href="https://wa.me/5562985756509?text=Olá,%20gostaria%20de%20informações%20sobre%20atendimento%20na%20área%20de%20família." target="_blank" rel="noopener noreferrer" class="w-full bg-gold/10 hover:bg-gold border border-gold/40 text-gold hover:text-navy font-semibold py-3 px-4 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 text-sm">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Entrar em contato</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ATENDIMENTO -->
+    <section id="atendimento" class="py-20 bg-navy-dark border-t border-gold/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-navy to-navy-light border border-gold/30 rounded-3xl p-8 sm:p-12 shadow-2xl">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <span class="text-xs uppercase tracking-widest text-gold font-semibold">Canais de Acesso</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold font-serif text-white">Como podemos iniciar seu atendimento?</h2>
+                        <p class="text-gray-300 text-base leading-relaxed">
+                            O escritório disponibiliza formatos flexíveis para assegurar que você receba a orientação jurídica adequada com total comodidade e discrição.
+                        </p>
+                        <div class="space-y-4 pt-2">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 rounded-lg bg-gold/10 border border-gold/30 flex items-center justify-center text-gold shrink-0 mt-1">
+                                    <i class="fa-solid fa-handshake"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-base">Atendimento presencial</h4>
+                                    <p class="text-sm text-gray-300">Disponível em Trindade–GO, mediante confirmação de agendamento prévio.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 rounded-lg bg-gold/10 border border-gold/30 flex items-center justify-center text-gold shrink-0 mt-1">
+                                    <i class="fa-solid fa-video"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-base">Atendimento on-line</h4>
+                                    <p class="text-sm text-gray-300">Consultoria remota por vídeo ou chamada, conforme disponibilidade e conveniência.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 rounded-lg bg-gold/10 border border-gold/30 flex items-center justify-center text-gold shrink-0 mt-1">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-base">Canal rápido pelo WhatsApp</h4>
+                                    <p class="text-sm text-gray-300">Atendimento direto pelo número <strong class="text-gold">(62) 98575-6509</strong>.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-navy p-8 rounded-2xl border border-gold/20 text-center space-y-6 shadow-xl">
+                        <div class="w-16 h-16 rounded-full bg-gold/10 border border-gold/40 mx-auto flex items-center justify-center text-gold text-2xl">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-white">Próximos passos para sua consulta</h3>
+                        <p class="text-sm text-gray-300">
+                            Entre em contato informando um breve resumo da sua situação. Nossa equipe orientará sobre os documentos necessários e o agendamento.
+                        </p>
+                        <a href="https://wa.me/5562985756509?text=Olá,%20gostaria%20de%20informações%20sobre%20atendimento%20jurídico." target="_blank" rel="noopener noreferrer" class="w-full bg-gold hover:bg-gold-light text-navy font-semibold py-4 px-6 rounded-xl transition-all shadow-lg flex items-center justify-center space-x-2 text-base">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span>Iniciar atendimento via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PERGUNTAS FREQUENTES -->
+    <section id="faq" class="py-20 bg-navy border-t border-gold/10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 mb-16">
+                <span class="text-xs uppercase tracking-widest text-gold font-semibold">Tire suas dúvidas</span>
+                <h2 class="text-3xl sm:text-4xl font-bold font-serif text-white">Perguntas frequentes</h2>
+                <div class="w-16 h-0.5 bg-gold mx-auto"></div>
+                <p class="text-gray-300 text-sm sm:text-base">
+                    Esclarecimentos importantes sobre o funcionamento do atendimento jurídico.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-navy-dark border border-gold/20 rounded-xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-semibold text-white text-base">Como funciona o primeiro contato?</span>
+                        <i class="fa-solid fa-chevron-down text-gold transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-sm text-gray-300 leading-relaxed border-t border-gold/10 pt-3">
+                        O primeiro contato pode ser feito diretamente por WhatsApp ou pelo formulário do site. Nele, você apresenta um breve resumo do seu caso para que possamos avaliar a viabilidade da consulta e direcionar o atendimento adequado.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-navy-dark border border-gold/20 rounded-xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-semibold text-white text-base">O atendimento pode ser realizado on-line?</span>
+                        <i class="fa-solid fa-chevron-down text-gold transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-sm text-gray-300 leading-relaxed border-t border-gold/10 pt-3">
+                        Sim. Oferecemos atendimento on-line seguro via videochamada ou chat para clientes que preferem a comodidade do atendimento remoto, mantendo o mesmo rigor ético e sigilo profissional.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-navy-dark border border-gold/20 rounded-xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-semibold text-white text-base">Como solicitar uma consulta?</span>
+                        <i class="fa-solid fa-chevron-down text-gold transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-sm text-gray-300 leading-relaxed border-t border-gold/10 pt-3">
+                        Basta clicar em qualquer um dos botões de WhatsApp espalhados pelo site ou preencher o formulário de contato. Nossa equipe entrará em contato para confirmar a disponibilidade de horário.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-navy-dark border border-gold/20 rounded-xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-semibold text-white text-base">Quais informações devo apresentar sobre meu caso?</span>
+                        <i class="fa-solid fa-chevron-down text-gold transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-sm text-gray-300 leading-relaxed border-t border-gold/10 pt-3">
+                        Recomendamos relatar os fatos principais de forma clara e objetiva, reunindo documentos relevantes (contratos, notificações, boletins de ocorrência, etc.), sem a necessidade de enviar dados sensíveis desnecessários antes da orientação direta.
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="bg-navy-dark border border-gold/20 rounded-xl overflow-hidden transition-all">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-semibold text-white text-base">Como saber se o advogado atende minha situação?</span>
+                        <i class="fa-solid fa-chevron-down text-gold transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-sm text-gray-300 leading-relaxed border-t border-gold/10 pt-3">
+                        Atuamos nas áreas Criminal, Cível e de Família. Caso sua demanda pertença a outro ramo do Direito, faremos uma análise preliminar ou indicaremos o encaminhamento adequado durante o primeiro contato.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULÁRIO DE CONTATO -->
+    <section id="contato" class="py-20 bg-navy-dark border-t border-gold/10">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-navy border border-gold/30 rounded-3xl p-8 sm:p-12 shadow-2xl">
+                <div class="text-center space-y-4 mb-10">
+                    <span class="text-xs uppercase tracking-widest text-gold font-semibold">Fale Conosco</span>
+                    <h2 class="text-3xl font-bold font-serif text-white">Solicite contato</h2>
+                    <div class="w-16 h-0.5 bg-gold mx-auto"></div>
+                    <p class="text-gray-300 text-sm">Preencha os campos abaixo para iniciar seu atendimento com agilidade.</p>
+                </div>
+
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="block text-xs uppercase tracking-wider text-gold font-semibold">Nome completo *</label>
+                            <input type="text" id="name" required class="w-full bg-navy-dark border border-gold/30 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold transition-all text-sm" placeholder="Seu nome">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-xs uppercase tracking-wider text-gold font-semibold">WhatsApp ou Telefone *</label>
+                            <input type="tel" id="phone" required class="w-full bg-navy-dark border border-gold/30 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold transition-all text-sm" placeholder="(62) 90000-0000">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="block text-xs uppercase tracking-wider text-gold font-semibold">Área jurídica de interesse *</label>
+                            <select id="legal-area" required class="w-full bg-navy-dark border border-gold/30 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold transition-all text-sm">
+                                <option value="" disabled selected>Selecione a área</option>
+                                <option value="Criminal">Direito Criminal</option>
+                                <option value="Cível">Direito Civil</option>
+                                <option value="Família">Direito de Família</option>
+                                <option value="Outra">Outra / Dúvida geral</option>
+                            </select>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-xs uppercase tracking-wider text-gold font-semibold">Preferência de atendimento *</label>
+                            <select id="attendance-type" required class="w-full bg-navy-dark border border-gold/30 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold transition-all text-sm">
+                                <option value="" disabled selected>Selecione o formato</option>
+                                <option value="Presencial">Presencial (Trindade–GO)</option>
+                                <option value="On-line">On-line (Remoto)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="block text-xs uppercase tracking-wider text-gold font-semibold">Breve mensagem (Opcional)</label>
+                        <textarea id="message" rows="4" class="w-full bg-navy-dark border border-gold/30 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold transition-all text-sm resize-none" placeholder="Descreva sucintamente sua necessidade jurídica..."></textarea>
+                    </div>
+
+                    <div class="flex items-start space-x-3 pt-2">
+                        <input type="checkbox" id="lgpd" required class="mt-1 accent-gold w-4 h-4">
+                        <label for="lgpd" class="text-xs text-gray-400 leading-relaxed">
+                            Concordo com o tratamento dos meus dados pessoais informados neste formulário exclusivamente para fins de contato e orientação jurídica, em conformidade com a Lei Geral de Proteção de Dados (LGPD).
+                        </label>
+                    </div>
+
+                    <button type="submit" class="w-full bg-gold hover:bg-gold-light text-navy font-semibold py-4 rounded-xl transition-all shadow-lg text-base flex items-center justify-center space-x-2">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>Enviar solicitação e continuar no WhatsApp</span>
+                    </button>
+                </form>
+
+                <!-- Mensagem de Sucesso (Oculta por padrão) -->
+                <div id="form-success" class="hidden mt-6 p-6 bg-gold/10 border border-gold rounded-xl text-center space-y-3">
+                    <div class="text-gold text-3xl"><i class="fa-solid fa-circle-check"></i></div>
+                    <h3 class="font-serif font-bold text-white text-lg">Solicitação preparada com sucesso!</h3>
+                    <p class="text-sm text-gray-300">Você será redirecionado para o WhatsApp oficial para concluir seu atendimento com o Dr. Ricardo Menezes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="bg-navy-dark border-t border-gold/20 py-12 text-gray-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="space-y-4 md:col-span-1">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 rounded-full border border-gold flex items-center justify-center text-gold">
+                            <i class="fa-solid fa-scale-balanced text-sm"></i>
+                        </div>
+                        <span class="font-serif font-bold text-white tracking-wide">ADV. RICARDO MENEZES</span>
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Advocacia ética, séria e comprometida com a defesa de seus direitos em Trindade–GO e região.
+                    </p>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="font-serif text-white font-bold text-base">Navegação</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#inicio" class="hover:text-gold transition-colors">Início</a></li>
+                        <li><a href="#sobre" class="hover:text-gold transition-colors">Sobre o Advogado</a></li>
+                        <li><a href="#atuacao" class="hover:text-gold transition-colors">Áreas de Atuação</a></li>
+                        <li><a href="#atendimento" class="hover:text-gold transition-colors">Formas de Atendimento</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="font-serif text-white font-bold text-base">Áreas Jurídicas</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#atuacao" class="hover:text-gold transition-colors">Direito Criminal</a></li>
+                        <li><a href="#atuacao" class="hover:text-gold transition-colors">Direito Civil</a></li>
+                        <li><a href="#atuacao" class="hover:text-gold transition-colors">Direito de Família</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="font-serif text-white font-bold text-base">Contato & Local</h4>
+                    <p class="text-xs text-gray-400">Trindade–GO e Região Metropolitana</p>
+                    <p class="text-xs text-gold font-semibold">(62) 98575-6509</p>
+                    <div class="pt-2">
+                        <a href="https://wa.me/5562985756509" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-xs bg-gold/10 border border-gold/30 px-3 py-1.5 rounded-lg text-gold hover:bg-gold hover:text-navy transition-all">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Abrir WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gold/10 pt-8 flex flex-col md:flex-row items-center justify-between text-xs space-y-4 md:space-y-0 text-gray-500">
+                <p>&copy; 2026 Adv. Ricardo Menezes (Ricardo Pereira). Todos os direitos reservados. OAB/GO [Sob Validação].</p>
+                <div class="flex space-x-6">
+                    <span>Política de Privacidade (LGPD)</span>
+                    <span>Conformidade Ética OAB</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÃO FIXO WHATSAPP -->
+    <a href="https://wa.me/5562985756509?text=Olá,%20gostaria%20de%20informações%20sobre%20atendimento%20jurídico." target="_blank" rel="noopener noreferrer" aria-label="Contato via WhatsApp" class="fixed bottom-6 right-6 z-50 bg-emerald-600 hover:bg-emerald-500 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-2xl transition-all duration-300 hover:scale-110">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Menu Mobile Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // FAQ Accordion
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                
+                // Fecha os outros
+                faqToggles.forEach(otherToggle => {
+                    if (otherToggle !== toggle) {
+                        otherToggle.nextElementSibling.classList.add('hidden');
+                        otherToggle.querySelector('i').classList.remove('rotate-180');
+                    }
+                });
+
+                // Alterna o atual
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Formulário de Contato com Redirecionamento Dinâmico para WhatsApp
+        const contactForm = document.getElementById('contact-form');
+        const formSuccess = document.getElementById('form-success');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const area = document.getElementById('legal-area').value;
+            const attendance = document.getElementById('attendance-type').value;
+            const message = document.getElementById('message').value;
+
+            const text = `Olá, meu nome é *${name}* (Tel: ${phone}). Gostaria de atendimento na área de *${area}* (${attendance}). ${message ? 'Mensagem: ' + message : ''}`;
+            const encodedText = encodeURIComponent(text);
+            const whatsappUrl = `https://wa.me/5562985756509?text=${encodedText}`;
+
+            // Mostra confirmação
+            contactForm.classList.add('hidden');
+            formSuccess.classList.remove('hidden');
+
+            // Redireciona após 1.5 segundos
+            setTimeout(() => {
+                window.open(whatsappUrl, '_blank');
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
